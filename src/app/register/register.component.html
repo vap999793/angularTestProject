@@ -1,0 +1,126 @@
+<!-- <p>register works!</p> -->
+<div class="container-fluid bgregister">
+    <div class="make_center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-6 mt-2 mb-2">
+                <form class="form-container" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <h4 class="text-center font-weight-bold"> Registration </h4>
+
+
+                        <label for="InputPassword1">Name</label>
+                        <input type="text" formControlName="name" class="form-control" id="emails"
+                            aria-describeby="emailHelp" placeholder="Enter your name" autocomplete="off"
+                            ng-required="true">
+                        <span
+                            *ngIf="registerForm.get('name').errors?.required && (registerForm.get('name').touched || !registerForm.get('name').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **Name is required
+                        </span>
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputEmail1">Email Address</label>
+                        <input type="email" formControlName="email" class="form-control" id="emails"
+                            aria-describeby="emailHelp" placeholder="Enter email" autocomplete="off" ng-required="true">
+                        <span
+                            *ngIf="registerForm.get('email').errors?.required && (registerForm.get('email').touched || !registerForm.get('email').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **Email is required
+                        </span>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="InputEmail1">Mobile</label>
+                        <input type="number" formControlName="mobile" class="form-control" id="emails"
+                            aria-describeby="emailHelp" placeholder="Enter your mobile number" autocomplete="off">
+                        <span
+                            *ngIf="registerForm.get('mobile').errors?.required && (registerForm.get('mobile').touched || !registerForm.get('mobile').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **Mobile Number is required
+                        </span>
+                        <span
+                            *ngIf="registerForm.get('mobile').errors?.minlength && (registerForm.get('mobile').touched || !registerForm.get('mobile').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **Must contain 10 digits
+                        </span>
+                        <span
+                            *ngIf="registerForm.get('mobile').errors?.maxlength && (registerForm.get('mobile').touched || !registerForm.get('mobile').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **Must contain 10 digits
+                        </span>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input formControlName="mobileNumber" id="mobileNumber" type="text" class="form-control"
+                            placeholder="Enter your 10 digits mobile number">
+                        <div *ngIf="(f.mobileNumber.touched || !f.mobileNumber.pristine) && f.mobileNumber.invalid"
+                            class="text-danger font-weight-bold">
+                            <div *ngIf="f.mobileNumber.errors.required">**Mobile Number is required.</div>
+                            <div *ngIf="f.mobileNumber.errors.pattern">**Please, Enter 10 digit Mobile Number.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputEmail1">College Name</label>
+                        <input type="text" formControlName="name" class="form-control" id="emails"
+                            aria-describeby="emailHelp" placeholder="Enter your name" autocomplete="off"
+                            ng-required="true">
+                        <span
+                            *ngIf="registerForm.get('name').errors?.required && (registerForm.get('name').touched || !registerForm.get('name').pristine)"
+                            id="username" class="text-danger font-weight-bold">
+                            **College Name is required
+                        </span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                        <span class="text-danger font-weight-bold"
+                            *ngIf="(registerForm.get('password').touched || !registerForm.get('password').pristine) && registerForm.get('password').errors?.required">
+                            **Password is required
+                        </span>
+                        <span class="text-danger font-weight-bold"
+                            *ngIf="(registerForm.get('password').touched || !registerForm.get('password').pristine) && registerForm.get('password').errors?.invalidPassword">
+                            **Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                            letter and 1 number
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="confirmPassword"
+                            placeholder="Confirm Password">
+                        <span class="text-danger font-weight-bold"
+                            *ngIf="(registerForm.get('confirmPassword').touched || !registerForm.get('confirmPassword').pristine) && registerForm.get('confirmPassword').errors?.required">
+                            **Confirm Password is required
+                        </span>
+                        <span class="text-danger font-weight-bold"
+                            *ngIf="(registerForm.get('confirmPassword').touched || !registerForm.get('confirmPassword').pristine) && registerForm.get('confirmPassword').errors?.passwordMismatch">
+                            **Passwords doesnot match
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"
+                        (click)="registerEventHandler()">Submit</button>
+                    <label>
+                        <div class="rem"><input type="checkbox" name="remember"> Remember me</div>
+
+                    </label>
+                    <!-- <div class="form-footer">
+                        <p> Don't have an account? <a href="#">Sign Up</a></p>
+
+                    </div> -->
+                    <div class="container1">
+                        <button type="reset" class="cancelbtn btn btn-primary btn-block">Cancel</button>
+                        <!-- <span class="psw float-right">Forgot <a href="#">password?</a></span> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

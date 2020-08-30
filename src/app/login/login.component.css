@@ -1,0 +1,53 @@
+
+form{
+	background: rgb(139, 212, 235);
+}
+/* set padding and size of th form */
+.form-container{
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.container1 button {
+    
+    background-color: #f44336;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container1 button:hover {
+    background-color: green;
+  }
+
+
+  .btn {
+    /* font-family: 'Baloo Bhai', cursive; */
+    margin: 0px 0px;
+    background-color: black;
+    color: white;
+    padding: 0px 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: cadetblue;
+}
+
+@media screen and (max-width:508px){
+    .form-container{
+        width: 100%;
+    }
+}
+
+.make_center{
+    margin-top: 1vw;
+}
+
+.bg_color{
+    /* background-color: rgb(221, 251, 252); */
+    background-image: url('https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg');
+    
+}

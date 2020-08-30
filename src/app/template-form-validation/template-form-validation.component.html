@@ -1,0 +1,40 @@
+<div class="container">
+    <form #registerForm="ngForm" (ngSubmit)="registerForm.form.valid.submitEventHandler()">
+        
+        <div class="form-group">
+            <input type="text" class="form-control" name="txtUserName" placeholder="username" 
+            [(ngModel)]="userDetails.UserName" required #txtUserName="ngModel"
+            [ngClass]="{dataInvalid : txtUserName.errors?.required && (txtUserName.touched || ! txtUserName.pristine)}">
+            <div *ngIf='txtUserName.errors?.required && (txtUserName.touched || ! txtUserName.pristine)'>
+                **Username required
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="txtPassword" placeholder="password" 
+            [(ngModel)]="userDetails.password" required minlength='8' #txtPassword='ngModel'
+            [ngClass]="{dataInvalid : txtPassword.errors?.required && (txtPassword.touched || ! txtPassword.pristine)}">
+            <div *ngIf='txtPassword.errors?.required && (txtPassword.touched || ! txtPassword.pristine)'>
+                **Password required
+            </div>
+            <div *ngIf='txtPassword.errors?.minlength && (txtPassword.touched || ! txtPassword.pristine)'>
+                **Password min length
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="txtEmailId" placeholder="email" 
+            [(ngModel)]="userDetails.emailId" required #txtEmailId='ngModel'
+            [ngClass]="{dataInvalid : txtEmailId.errors?.required && (txtEmailId.touched || ! txtEmailId.pristine)}">
+            <div *ngIf='txtEmailId.errors?.minlength && (txtEmailId.touched || ! txtEmailId.pristine)'>
+                **Email required
+            </div>
+        </div>
+       
+    </form>
+    {{userDetails|json}}
+    <br>
+    {{registerForm.value|json}}
+    <br>
+    {{registerForm.status|json}}
+    
+</div>

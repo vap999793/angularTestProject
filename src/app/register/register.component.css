@@ -1,0 +1,51 @@
+
+form{
+    background: rgb(199, 234, 245);
+    opacity: .9;
+}
+/* set padding and size of th form */
+.form-container{
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.container1 button {
+    
+    background-color: #f44336;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container1 button:hover {
+    background-color: green;
+  }
+
+  .btn {
+    /* font-family: 'Baloo Bhai', cursive; */
+    margin: 0px 0px;
+    background-color: black;
+    color: white;
+    padding: 0px 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: cadetblue;
+}
+
+@media screen and (max-width:508px){
+    .form-container{
+        width: 100%;
+    }
+}
+
+.make_center{
+    margin-top: 1vw;
+}
+
+.bgregister{
+    background-image: url('https://wpamelia.com/wp-content/uploads/2019/02/4k-wallpaper-architecture-background-1308624.jpg');
+}

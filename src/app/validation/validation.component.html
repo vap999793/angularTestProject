@@ -1,0 +1,45 @@
+<div class="container-fluid bg_color">
+    <div class="make_center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 mt-2 mb-2">
+                <form class="form-container" [formGroup]="loginForm">
+                    <div class="form-group">
+                        <h4 class="text-center font-weight-bold"> Login </h4>
+                        <label for="InputEmail1">Email Address</label>
+                        <input type="email" formControlName="username" class="form-control" id="emails"
+                            aria-describeby="emailHelp" placeholder="Enter email" autocomplete="off" ng-required="true">
+                        <span *ngIf="loginForm.get('username').errors?.required && (loginForm.get('username').touched || !loginForm.get('username').pristine)" id="username"
+                            class="text-danger font-weight-bold">
+                            **Username is required
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPassword1">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="pass" placeholder="Password" autocomplete="off">
+                        
+                        <span *ngIf="loginForm.get('password').errors?.required && (loginForm.get('password').touched || !loginForm.get('password').pristine)" id="passwords" class="text-danger font-weight-bold">
+                            **Password is required
+                        </span>
+                        <span *ngIf="loginForm.get('password').errors?.minlength && (loginForm.get('password').touched || !loginForm.get('password').pristine)" id="passwords" class="text-danger font-weight-bold">
+                            **Minimum length of Password must be 8
+                        </span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block"
+                        (click)="loginEventHandler();">Submit</button>
+                    <label>
+                        <div class="rem"><input type="checkbox" checked="checked" name="remember"> Remember me</div>
+
+                    </label>
+                    <div class="form-footer">
+                        <p> Don't have an account? <a href="#">Sign Up</a></p>
+
+                    </div>
+                    <div class="container1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw float-right">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

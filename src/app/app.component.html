@@ -1,0 +1,138 @@
+<div class="container bgset">
+
+  <div class="row header">
+    <div class="col-3">
+      <img class="img-fluid image_small" src="../assets/download2.jpg">
+    </div>
+    <div class="col-9">
+      <h1 class="simpli">Simplilearn Hiring Challenge</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus" routerLinkActive="active">ContactUs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+    </ul> -->
+
+    <nav class="navbar navbar-expand-md navbg w-100">
+
+      <!-- <a class="navbar-brand"><img src="../assets/logo.jpg" class=" imgSize img-fluid"></a> -->
+
+
+      <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between">
+
+        <ul class="navbar-nav" id="navcolor">
+
+          <li class="nav-item">
+            <a class="nav-link navtxt active" routerLink="" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navtxt" routerLink="/contactus" routerLinkActive="active">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navtxt" routerLink="/aboutus" routerLinkActive="active">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navtxt" routerLink="/login" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navtxt" routerLink="/register" routerLinkActive="active">Register</a>
+          </li>
+
+        </ul>
+
+
+        <!-- Search bar -->
+
+        <form class="form-inline ml-3">
+
+          <div class="input-group on_button">
+
+            <input type="text" class="form-control " placeholder="Search">
+
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </nav>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-12">
+      <!-- <app-employee-details></app-employee-details> -->
+      <router-outlet></router-outlet>
+      <!-- <app-template-form-validation></app-template-form-validation> -->
+      <!-- <app-pip-example></app-pip-example> -->
+      <!-- <app-validation></app-validation> -->
+      <!-- <app-directive-example></app-directive-example> -->
+    </div>
+  </div>
+
+  <!-- <div class="row bg-dark text-light mt-3">
+    <div class="col-8">
+      <h2>Copyrights @Vishal</h2>
+    </div>
+    <div class="col-1">
+      <a href="#"><span class="fa fa-facebook"></span></a>
+    </div>
+    <div class="col-1">
+      <a href="#"><span class="fa fa-twitter"></span></a>
+    </div>
+    <div class="col-1">
+      <a href="#"><span class="fa fa-instagram"></span></a>
+    </div>
+  </div> -->
+
+  <hr>
+
+  <footer class="page-footer font-small bg-dark pt-4 mt-4">
+
+
+    <div class="container1">
+
+
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1" id="register">Register for free</h5>
+        </li>
+        <li class="list-inline-item" id="signup1">
+          <a href="/register" class="btn btn-outline-white btn-rounded" id="signup">Sign up!</a>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://www.google.com" target="_blank"> Company info</a>
+      <a class="ml-3" href="https://www.facebook.com/vishal.prajapati.77398143" target="_blank"> <span
+          class="fa fa-facebook"></span></a>
+      <a href="https://www.google.com" target="_blank"> <span class="fa fa-twitter"></span></a>
+      <a href="https://www.google.com" target="_blank"> <i class="fa fa-search"></i></a>
+    </div>
+
+  </footer>
+</div>

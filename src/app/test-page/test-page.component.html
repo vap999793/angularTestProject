@@ -1,0 +1,62 @@
+<!-- <div class="row form-check">
+        <label class="form-control"> Question No : {{questionArray[currentQuestionNumber-1].questionNumber}}.
+            <span>{{questionArray[currentQuestionNumber-1].qString}}</span>
+        </label>
+    </div>
+
+    
+
+    <div class="row form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+            [value]="questionArray[currentQuestionNumber-1].option[0]"
+            (change)="changeRadioEventHandler(0)" [checked]="this.currentRadioSelected==0">
+        <label class="form-check-label" for="exampleRadios1">
+            {{questionArray[currentQuestionNumber-1].option[0]}}
+        </label>
+    </div>
+
+    <div class="row form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+            [value]="questionArray[currentQuestionNumber-1].option[1]"
+            (change)="changeRadioEventHandler(1)" [checked]="this.currentRadioSelected==1">
+        <label class="form-check-label" for="exampleRadios1">
+            {{questionArray[currentQuestionNumber-1].option[1]}}
+        </label>
+    </div>
+    
+    <div class="row form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+            [value]="questionArray[currentQuestionNumber-1].option[2]"
+            (change)="changeRadioEventHandler(2)" [checked]="this.currentRadioSelected==2">
+        <label class="form-check-label" for="exampleRadios1">
+            {{questionArray[currentQuestionNumber-1].option[2]}}
+        </label>
+    </div> -->
+
+
+<div class="container-fluid min-vh-100">
+    <div class="row min-vh-100">
+        <div class="col-md-12">
+            <!-- <div class="card m-5"> -->
+                <div class="card-header mb-3 bgtest">
+                    {{"Question "+currentQuestionNumber}}
+                </div>
+                <!-- <div class="card-body"> -->
+                    <h5 class="card-title">{{questionArray[currentQuestionNumber-1].question}}</h5>
+                    <div *ngFor="let option of questionArray[currentQuestionNumber-1].options; let i = index">
+                        <input type="radio" value="{{i}}" name="option" (change)="changeAnswer($event.target.value)">
+                        &nbsp; {{option}}
+                    </div>
+                <!-- </div> -->
+                <div class="card-footer text-right mt-3 bgtest" *ngIf="currentQuestionNumber < 15; else finish">
+                    <button class="btn btn-primary" (click)="nextQuestionEventHandler();" [disabled]="currentRadioSelected<0?true:false">Next</button>
+                </div>
+                <ng-template #finish>
+                    <div class="card-footer text-right mt-3 bgtest">
+                        <button class="btn btn-primary" (click)="finishTestEventHandler();" [disabled]="currentRadioSelected<0?true:false">Finish</button>
+                    </div>
+                </ng-template>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,204 @@
+/* .bgset{
+    background-image: url('../assets/bglogin.jpg');
+} */
+
+.image_small{
+    width: 3vw;
+    height: 3vw;
+}
+
+.footer-copyright{
+    color: burlywood;
+}
+
+.footer-copyright a:hover{
+    color: crimson;
+
+}
+
+.container1 button {
+    
+    background-color: #f44336;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container1 button:hover {
+    background-color: green;
+  }
+
+  #signup1{
+    border: 2px solid rgb(235, 150, 150);
+    /* color: cornsilk; */
+}
+
+#signup1 a:hover{
+    /* border: 3px solid bisque; */
+    background-color: darkcyan;
+    
+}
+
+#register{
+    color: aliceblue;
+}
+
+#signup{
+    color: cornsilk;
+}
+
+
+#register{
+    color: aliceblue;
+}
+
+
+#signup{
+    color: aliceblue;
+}
+
+#signup1{
+    border: 2px solid rgb(235, 150, 150);
+}
+
+#signup1 a:hover{
+    border: 3px solid bisque;
+    
+}
+
+.footer-copyright{
+    color: burlywood;
+}
+
+.footer-copyright a:hover{
+    color: crimson;
+
+}
+
+.make_right{
+    float: right;
+    margin-left: 110vh;
+}
+
+.imgSize{
+    width: 4vw;
+    height: 3vw;
+}
+
+.imageDimension{
+    height: 250px;
+}
+
+.row1{
+    background-color: rgb(213, 248, 248);
+}
+
+.main{
+    background-color: beige;
+}
+
+.latestPart{
+    background-color: rgb(204, 240, 212);
+}
+
+#dropdown_part a:hover{
+    background-color: darkgreen;
+}
+
+#nav-item a:hover{
+    color: darkred;
+}
+
+
+/* set padding and size of th form */
+.form-container.{
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.container1 button {
+    
+    background-color: #f44336;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container1 button:hover {
+    background-color: green;
+  }
+
+.login_part{
+    border: 2px solid rgb(79, 21, 185);
+    border-radius: 6px;
+}
+.login_run{
+    /* padding:2px; */
+    text-align: center;
+}
+
+@media screen and (max-width:466px){
+    .login_part{
+        height: 160vw;
+    }
+}
+
+@media screen and (max-width:367px){
+    .login_part{
+        height: 170vw;
+    }
+}
+
+@media screen and (max-width:356px){
+    .login_part{
+        height: 180vw;
+    }
+}
+
+@media screen and (max-width:320px){
+    .login_part{
+        height: 220vw;
+    }
+}
+
+@media screen and (max-width:280px){
+    .login_part{
+        height: 270vw;
+    }
+}
+
+.login_title{
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login_heading{
+    background-color: rgb(32, 33, 36);
+    color: white;
+}
+
+.on_button button:hover{
+    background-color: darkolivegreen;
+}
+.header{
+    background-color: rgb(189, 241, 200);
+}
+
+.navbg{
+    background-color: rgb(59, 113, 230);
+}
+
+#navcolor li a:hover{
+    color: red;
+}
+
+.navtxt{
+    color: rgb(19, 224, 19);
+    font-weight: bolder;
+}
+
+.simpli{
+    /* width:16vw; */
+    color: rgb(240, 88, 88);
+    font-weight: bold;
+}
